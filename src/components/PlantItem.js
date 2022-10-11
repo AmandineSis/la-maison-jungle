@@ -4,7 +4,7 @@ import '../styles/PlantItem.css'
 
 function PlantItem ({name, cover, id, light, water}){
 
-   return <div>
+   return <li>
         <img src={plant} alt="plante" className="lmj-plant-item-cover" />
         <div>
             <div className="lmj-plant-item">water
@@ -15,7 +15,7 @@ function PlantItem ({name, cover, id, light, water}){
             </div>
         </div>
     
-    </div>
+    </li>
   
 }
 
