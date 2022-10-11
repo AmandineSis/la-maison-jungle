@@ -3,15 +3,12 @@ import '../styles/PlantItem.css'
 
 function PlantItem ({name, cover, id, light, water}){
 
-   return <li key={id} onClick={() => handleClick(name)}>
+   return <li key={id} onClick={() => handleClick(name)} className='lmj-plant-item'>
         <img src={cover} alt={`${name} cover`} className="lmj-plant-item-cover" />
-        <div>
-            <div className="lmj-plant-item">water
+        <p className="lmj-plant-name">{name}</p>
+        <div className="lmj-plant-care">
             <CareScale careType='water' scaleValue={water} />
-            </div>
-            <div className="lmj-plant-item">Light 
             <CareScale careType='light' scaleValue={light} />
-            </div>
         </div>
     
     </li>
