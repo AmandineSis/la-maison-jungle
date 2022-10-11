@@ -3,7 +3,7 @@
 	width: 220px;
 	border-radius: 20px;
 	margin: 10px;
-	border: black solid 2px;
+	box-shadow: grey 2px 3px 5px;
 }
 
 .lmj-plant-item {
