@@ -4,9 +4,15 @@
 	padding: 32px;
 	border-bottom: solid 3px black;
 	display: flex;
+	flex-direction: column;
+	align-items: right;
+}
+
+.lmj-header{
+	display: flex;
 	justify-content: flex-end;
 	flex-direction: row;
-	align-items: center;
+	align-items: right;
 }
 
 .lmj-title {
