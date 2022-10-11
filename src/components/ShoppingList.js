@@ -1,7 +1,8 @@
 import { plantList } from '../data/plantList.js'
 import '../styles/ShoppingList.css'
+import CareScale from './CareScale.js'
 
-function ShoppingList() {
+function ShoppingList({children}) {
 	const categories = plantList.reduce(
 		(acc, plant) =>
 			acc.includes(plant.category) ? acc : acc.concat(plant.category),
@@ -20,10 +21,14 @@ function ShoppingList() {
 					<li key={plant.id} className='lmj-plant-item'>
                         {plant.name}{plant.isBestSale && <span>🔥</span>}
                         {plant.isSpecialOffer && <div className='lmj-sales'>Soldes</div>}
+                        <CareScale careType='water' scaleValue={plant.water} />
+						<CareScale careType='light' scaleValue={plant.light} />
                     </li>
 				))}
 
 			</ul>
+            <div className='lmj-plantItem'>                {children}
+            </div>
 		</div>
 	)
 }
