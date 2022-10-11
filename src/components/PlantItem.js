@@ -1,23 +1,22 @@
 import CareScale from "./CareScale";
-import { plantList } from "../data/plantList";
+import plant from '../assets/monstera.jpg'
+import '../styles/PlantItem.css'
 
-function PlantItem ({name, cover, id}){
+function PlantItem ({name, cover, id, light, water}){
 
-   return <div className="lmj-plant-item-cove">
-    <ul className='lmj-plant-list'>
-            {plantList.map((plant) => (
-					<li key={plant.id} className='lmj-plant-item'>
-                        {plant.name}{plant.isBestSale && <span>🔥</span>}
-                        {plant.isSpecialOffer && <div className='lmj-sales'>Soldes</div>}
-                       
-                    </li>
-				))}
-
-			</ul>
-    <CareScale careType='water' scaleValue={plant.water} />
-    <CareScale careType='light' scaleValue={plant.light} />
-   </div>
+   return <div>
+        <img src={plant} alt="plante" className="lmj-plant-item-cover" />
+        <div>
+            <div className="lmj-plant-item">water
+            <CareScale careType='water' scaleValue={water} />
+            </div>
+            <div className="lmj-plant-item">Light 
+            <CareScale careType='light' scaleValue={light} />
+            </div>
+        </div>
     
+    </div>
+  
 }
 
 export default PlantItem
