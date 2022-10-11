@@ -22,7 +22,7 @@ function ShoppingList({children}) {
 			{plantList.map((plant) => (
 				
 				<PlantItem 
-					key={plant.id}
+					id={plant.id}
 					name={plant.name} 
 					cover={plant.cover}
 					light={plant.light}
