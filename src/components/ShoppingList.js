@@ -4,7 +4,7 @@ import '../styles/ShoppingList.css'
 import PlantItem from './PlantItem.js'
 
 
-function ShoppingList({children}) {
+function ShoppingList() {
 	const categories = plantList.reduce(
 		(acc, plant) =>
 			acc.includes(plant.category) ? acc : acc.concat(plant.category),
@@ -26,9 +26,8 @@ function ShoppingList({children}) {
 					name={plant.name} 
 					cover={plant.cover}
 					light={plant.light}
-					water={plant.water}>
-					{children}
-            	</PlantItem>
+					water={plant.water} />
+				
 			))}
 			</ul>
             
