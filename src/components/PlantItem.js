@@ -3,7 +3,7 @@ import '../styles/PlantItem.css'
 
 function PlantItem ({name, cover, id, light, water}){
 
-   return <li key={id}>
+   return <li key={id} onClick={() => handleClick(name)}>
         <img src={cover} alt={`${name} cover`} className="lmj-plant-item-cover" />
         <div>
             <div className="lmj-plant-item">water
@@ -16,6 +16,10 @@ function PlantItem ({name, cover, id, light, water}){
     
     </li>
   
+}
+
+function handleClick(plantName) {
+    alert(`✨ Vous avez ajouté 1 ${plantName} à votre panier✨`)
 }
 
 export default PlantItem
