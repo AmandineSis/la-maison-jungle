@@ -1,4 +1,5 @@
 import CareScale from "./CareScale";
+import { plantList } from "../data/plantList";
 
 function PlantItem ({name, cover, id}){
 
