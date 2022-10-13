@@ -8,7 +8,8 @@ export const plantList = [
 		isBestSale: true,
 		light: 2,
 		water: 3,
-		cover: monstera
+		cover: monstera,
+		price: 15
 	},
 	{
 		name: 'ficus lyrata',
