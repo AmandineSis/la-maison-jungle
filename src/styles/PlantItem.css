@@ -6,6 +6,18 @@
 	box-shadow: grey 2px 3px 5px;
 }
 
+.lmj-price {
+	position: relative;
+	right: -180px;
+	top: -230px;
+	width: 30px;
+	height: 25px;
+	font-weight: 500;
+	color: white;
+	padding: 5px 10px;
+	background-color: #31b572;
+	border-radius: 0 20px 0;
+}
 .lmj-plant-item {
 	display: flex;
 	flex-wrap: wrap;
